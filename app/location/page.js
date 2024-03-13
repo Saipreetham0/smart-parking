@@ -8,8 +8,12 @@ import React, { useState, useEffect } from "react";
 import Sensor from "../components/sensorsData";
 import SetPointEdit from "../components/EditValue";
 import Link from "next/link";
+import PriceCard from "../components/PriceCard";
 
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+
+
+
 
 const location = () => {
   return (
@@ -34,6 +38,8 @@ const location = () => {
         <h1 class="text-xl font-medium mb-4">Car Parking Information</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
       </div>
+
+
     </div>
   );
 };

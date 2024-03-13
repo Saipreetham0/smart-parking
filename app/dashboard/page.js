@@ -1,17 +1,41 @@
 "use client";
 // import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import "../styles/globals.css";
 import { useRouter } from "next/navigation";
 import React, { useState, useEffect } from "react";
 import Sensor from "../components/sensorsData";
 import SetPointEdit from "../components/EditValue";
-import Link from "next/link";
-import LocationList from '../components/LocationList';
+// import Link from "next/link";
+import LocationList from "../components/LocationList";
+import PriceCard from "../components/PriceCard";
 
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
+const prices = {
+  1: {
+    "2-wheeler": 15,
+    "3-wheeler": 25,
+    "4-wheeler": 35,
+  },
+  2: {
+    "2-wheeler": 20,
+    "3-wheeler": 30,
+    "4-wheeler": 40,
+  },
+  3: {
+    "2-wheeler": 18,
+    "3-wheeler": 28,
+    "4-wheeler": 38,
+  },
+  4: {
+    "2-wheeler": 17,
+    "3-wheeler": 27,
+    "4-wheeler": 37,
+  },
+};
 
 const dashboard = () => {
   return (
@@ -26,28 +50,23 @@ const dashboard = () => {
             Navigation and Reservation Based Smart Parking Platform Using
             Genetic Optimization for Smart Cities
           </h2>
-          {/* <SetPointEdit /> */}
+        </div>
 
-          {/* <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/location1">
-              <div className="w-48 h-48 bg-white flex items-center justify-center rounded-lg shadow-md dark:bg-gray-800 ">
-                <p className="text-xl font-bold">Location 1</p>
+        <div className="container mx-auto py-8">
+          <h1 className="text-3xl font-bold mb-4">Price List</h1>
+          <div className="grid grid-cols-2 xl:grid-cols-4 gap-4 mb-4">
+            {Object.keys(prices).map((location) => (
+              <div key={location} className="w-full sm:w-1/2 md:w-auto">
+                <Link href={`/location/${location}`} passHref>
+                  <PriceCard location={location} price={prices[location]} />
+                </Link>
               </div>
-            </Link>
-            <div className="w-48 h-48 bg-white flex items-center justify-center rounded-lg shadow-md dark:bg-gray-800 ">
-              <p className="text-xl font-bold">Location 2</p>
-            </div>
-            <div className="w-48 h-48 bg-white flex items-center justify-center rounded-lg shadow-md dark:bg-gray-800 ">
-              <p className="text-xl font-bold">Location 3</p>
-            </div>
-            <div className="w-48 h-48 bg-white flex items-center justify-center rounded-lg shadow-md dark:bg-gray-800 ">
-              <p className="text-xl font-bold">Location 4</p>
-            </div>
-          </div>*/}
+            ))}
+          </div>
         </div>
       </div>
 
-      <LocationList />
+      {/* <LocationList /> */}
     </div>
   );
 };
