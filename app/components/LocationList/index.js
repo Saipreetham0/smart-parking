@@ -74,7 +74,7 @@ const Location = ({ location }) => {
         <div className="p-4">
           <h3 className="text-xl font-bold">{location.name}</h3>
           <p className="text-gray-600 dark:text-gray-200">
-            Available: {location.available}, Occupied: {location.occupied}
+            {/* Available: {location.available}, Occupied: {location.occupied} */}
           </p>
           <div className="mt-2">
             <p className="text-gray-700 dark:text-gray-300">Pricing:</p>

@@ -15,7 +15,7 @@ const dashboard = () => {
   return (
     <div>
       <div className="p-4  sm:ml-64">
-        <SensorDataTable />
+        {/* <SensorDataTable /> */}
       </div>
     </div>
   );
