@@ -7,8 +7,11 @@ import { useRouter } from "next/navigation";
 import React, { useState, useEffect } from "react";
 import Sensor from "../components/sensorsData";
 import SetPointEdit from "../components/EditValue";
+import Link from "next/link";
+import LocationList from '../components/LocationList';
 
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+
 
 const dashboard = () => {
   return (
@@ -24,8 +27,27 @@ const dashboard = () => {
             Genetic Optimization for Smart Cities
           </h2>
           {/* <SetPointEdit /> */}
+
+          {/* <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/location1">
+              <div className="w-48 h-48 bg-white flex items-center justify-center rounded-lg shadow-md dark:bg-gray-800 ">
+                <p className="text-xl font-bold">Location 1</p>
+              </div>
+            </Link>
+            <div className="w-48 h-48 bg-white flex items-center justify-center rounded-lg shadow-md dark:bg-gray-800 ">
+              <p className="text-xl font-bold">Location 2</p>
+            </div>
+            <div className="w-48 h-48 bg-white flex items-center justify-center rounded-lg shadow-md dark:bg-gray-800 ">
+              <p className="text-xl font-bold">Location 3</p>
+            </div>
+            <div className="w-48 h-48 bg-white flex items-center justify-center rounded-lg shadow-md dark:bg-gray-800 ">
+              <p className="text-xl font-bold">Location 4</p>
+            </div>
+          </div>*/}
         </div>
       </div>
+
+      <LocationList />
     </div>
   );
 };
