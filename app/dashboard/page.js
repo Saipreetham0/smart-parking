@@ -53,11 +53,11 @@ const dashboard = () => {
         </div>
 
         <div className="container mx-auto py-8">
-          <h1 className="text-3xl font-bold mb-4">Price List</h1>
+          <h1 className="text-3xl font-bold mb-4">Location List</h1>
           <div className="grid grid-cols-2 xl:grid-cols-4 gap-4 mb-4">
             {Object.keys(prices).map((location) => (
               <div key={location} className="w-full sm:w-1/2 md:w-auto">
-                <Link href={`/location/${location}`} passHref>
+                <Link href={`/location${location}`} passHref>
                   <PriceCard location={location} price={prices[location]} />
                 </Link>
               </div>

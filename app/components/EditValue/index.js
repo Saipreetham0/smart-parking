@@ -137,24 +137,6 @@ const SetPointEdit = () => {
     setIsEditingHumidity(false);
   };
 
-  // const handleEditDeHumidity = () => {
-  //   setIsEditingDeHumidity(true);
-  // };
-
-  // const handleSaveDeHumidity = async () => {
-  //   const db = getDatabase();
-  //   const devicesRef = ref(db, "board1/outputs/digital");
-
-  //   const updates = {
-  //     dehumd_set_point_on: parseFloat(dehumiditySetPointOn, 10),
-  //     dehumd_set_point_off: parseFloat(dehumiditySetPointOff, 10),
-  //   };
-
-  //   update(devicesRef, updates);
-
-  //   setIsEditingDeHumidity(false);
-  // };
-
   const handleEditDeHumidity = () => {
     setIsEditingDeHumidity(true);
   };
