@@ -1,9 +1,5 @@
-
 import "../styles/globals.css";
 
-// import Navbar from "../components/NavBar";
-// import Footer from "../components/Footer";
-// import NewsBanner from "../components/Banner/Banner";
 import Providers from "../providers";
 
 export const metadata = {
@@ -15,13 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        {/* <Providers> */}
-        {/* <NewsBanner /> */}
-
-        {/* <Navbar /> */}
         <main>{children}</main>
-        {/* <Footer /> */}
-        {/* </Providers> */}
       </body>
     </html>
   );
