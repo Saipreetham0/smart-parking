@@ -18,6 +18,9 @@ import BookingForm from "../components/BookingForm";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 const location = () => {
+  const handleBooking = () => {
+    setBookingStatus(true);
+  };
   return (
     <div class="p-4  sm:ml-64">
       <div class="container mx-auto p-4">
