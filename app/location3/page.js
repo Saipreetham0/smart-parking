@@ -13,6 +13,8 @@ import ParkingGrid from "../components/parking";
 
 import { getDatabase, ref, onValue, update } from "firebase/database";
 
+import BookingForm from "../components/BookingForm";
+
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 const location = () => {
@@ -24,6 +26,13 @@ const location = () => {
 
         <ParkingGrid irParking1="IR_Sensor_5" irParking2="IR_Sensor_6" />
       </div>
+
+      <BookingForm
+        onBooking={handleBooking}
+        location="location3"
+        led1="12"
+        led2="14"
+      />
     </div>
   );
 };
